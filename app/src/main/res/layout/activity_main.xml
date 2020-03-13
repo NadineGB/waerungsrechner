@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="411dp"
+        android:layout_height="233dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/money" />
+
+    <TextView
+        android:id="@+id/hinweis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Trage den Betrag in Dollar ein den du in Euro umrechnen möchtest."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/betrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTop" />
+
+    <EditText
+        android:id="@+id/betrag"
+        android:layout_width="368dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint=" Betrag in EU"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/hinweis" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="betragUmrechnen"
+        android:text="Umrechnen"
+        app:layout_constraintLeft_toLeftOf="@id/betrag"
+        app:layout_constraintTop_toBottomOf="@id/betrag" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
